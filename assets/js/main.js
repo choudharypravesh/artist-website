@@ -1,11 +1,10 @@
-/*
-	Paradigm Shift by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 
 (function($) {
-
+	const scrollUp = "scroll-up";
+	const scrollDown = "scroll-down";
+	const body = document.body;
+	let lastScroll = 0;
 	var	$window = $(window),
 		$body = $('body');
 
@@ -204,5 +203,29 @@
 						}, 275);
 
 					});
+
+					window.addEventListener("scroll", () => {
+						const currentScroll = window.pageYOffset;
+						if (currentScroll <= 0) {
+						  body.classList.remove(scrollUp);
+						  return;
+						}
+					  
+						if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+						  // down
+						  body.classList.remove(scrollUp);
+						  body.classList.add(scrollDown);
+						  lottiePlayer.play();
+						} else if (
+						  currentScroll < lastScroll &&
+						  body.classList.contains(scrollDown)
+						) {
+						  // up
+						  body.classList.remove(scrollDown);
+						  body.classList.add(scrollUp);
+						  lottiePlayer.stop();
+						}
+						lastScroll = currentScroll;
+					  });
 
 })(jQuery);
