@@ -2735,6 +2735,10 @@ ul.items>li:last-child {
 		display: none;
 	}
 
+	#featured .brands a img {
+		width: 80% !important;
+	}
+
 }
 
 dl {
