@@ -2731,6 +2731,10 @@ ul.items>li:last-child {
 		margin: 0 0 2rem 0;
 	}
 
+	.topnav {
+		display: none;
+	}
+
 }
 
 dl {
@@ -3092,13 +3096,19 @@ a.arrow:before {
 }
 
 /* overwrite for featured brands */
-.brands a img {
+#featured .brands a img {
 	display: block;
-	/* height: 25vw; */
+	height: auto;
 	min-height: auto;
 	object-fit: unset;
 	object-position: center;
+	width: 400px;
+	margin: 0 auto;
+}
+
+#featured .brands a {
 	width: 100%;
+	text-align: center;
 }
 
 .brands a.landscape img {
