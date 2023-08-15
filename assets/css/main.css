@@ -205,6 +205,8 @@ body.is-preload *:after {
 	transition: none !important;
 }
 
+/* COMMON CLASSES */
+
 .center-align {
 	text-align: center;
 }
@@ -216,6 +218,13 @@ body.is-preload *:after {
 .grow-on-hover:hover {
 	transform: scale(1.1);
 }
+
+.black-white {
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  	filter: grayscale(100%);
+}
+
+/* COMMON CLASSES */
 
 .topnav {
 	padding: 2rem;
