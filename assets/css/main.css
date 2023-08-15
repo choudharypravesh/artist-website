@@ -205,6 +205,18 @@ body.is-preload *:after {
 	transition: none !important;
 }
 
+.center-align {
+	text-align: center;
+}
+
+.grow-on-hover {
+	transition: all .2s ease-in-out;
+}
+
+.grow-on-hover:hover {
+	transform: scale(1.1);
+}
+
 .topnav {
 	padding: 2rem;
     position: fixed;
@@ -229,11 +241,11 @@ body.is-preload *:after {
 .scroll-down .trigger-menu-wrapper {
 	transform: translate3d(0, -100%, 0);
   }
-  
+
   .scroll-down .lottie-wrapper {
 	background: 'grey';
   }
-  
+
   .scroll-up .trigger-menu-wrapper {
 	transform: none;
   }
@@ -3123,10 +3135,6 @@ a.arrow:before {
 	width: 100%;
 }
 
-.gallery a.landscape img {
-	height: 30vw;
-}
-
 .gallery a.portrait img {
 	height: 30vw;
 }
@@ -3265,12 +3273,13 @@ a.arrow:before {
 		height: 20rem;
 	}
 
-	.gallery a.landscape img {
+	.gallery a.portrait img {
 		height: 25rem;
 	}
 
-	.gallery a.portrait img {
-		height: 25rem;
+	.gallery a.landscape img {
+		height: 40rem;
+		object-fit: fill;
 	}
 
 	.gallery .modal .inner img {
@@ -3291,11 +3300,12 @@ a.arrow:before {
 		width: calc(50% - 0.625rem);
 	}
 
-	.gallery a img {
-		height: 20rem;
+	.gallery a.landscape img {
+		height: 26rem;
+		object-fit: fill;
 	}
 
-	.gallery a.landscape img {
+	.gallery a img {
 		height: 20rem;
 	}
 
@@ -3313,7 +3323,8 @@ a.arrow:before {
 	}
 
 	.gallery a.landscape img {
-		height: 12rem;
+		height: 22rem;
+		object-fit: fill;
 	}
 
 	.gallery a.portrait img {
