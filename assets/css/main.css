@@ -2746,6 +2746,12 @@ ul.items>li:last-child {
 	margin-bottom: 0;
 }
 
+/* iframes */
+
+.iframe-height {
+	height: 815px;
+}
+
 @media screen and (max-width: 736px) {
 
 	ul.items>li {
@@ -2758,6 +2764,12 @@ ul.items>li:last-child {
 
 	#featured .brands a img {
 		width: 80% !important;
+	}
+
+	/* iframes */
+
+	.iframe-height {
+		height: 315px;
 	}
 
 }
